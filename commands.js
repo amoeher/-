@@ -26,6 +26,15 @@ const TEST_COMMAND = {
   contexts: [0, 1, 2],
 };
 
+// Hello Command
+const HELLO_COMMAND = {
+  name: 'hello',
+  description: 'Hello command',
+  type: 1, // Type 1 is a slash command 
+  integration_types: [0, 1], // 0 Guild, 1 Bot
+  contexts: [0, 1, 2], // 0 Guild, 1 User, 2 Private
+};
+
 // Command containing options
 const CHALLENGE_COMMAND = {
   name: 'challenge',
@@ -44,6 +53,6 @@ const CHALLENGE_COMMAND = {
   contexts: [0, 2],
 };
 
-const ALL_COMMANDS = [TEST_COMMAND, CHALLENGE_COMMAND];
+const ALL_COMMANDS = [TEST_COMMAND, CHALLENGE_COMMAND, HELLO_COMMAND];
 
 InstallGlobalCommands(process.env.APP_ID, ALL_COMMANDS);
